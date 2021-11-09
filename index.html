@@ -1,0 +1,152 @@
+<style>
+/* Now all the acrylic layer is just only one class! */
+.acrylic {
+  /* Parent background + Gaussian blur */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  /* Exclusion blend */
+  background-blend-mode: exclusion;
+
+  /* Color/tint overlay + Opacity */
+  background: rgba(255, 255, 255, .6);
+
+  /* Tiled noise texture */
+  background-image: url(data:image/png;base64,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);
+}
+
+/* Other styles for sample purposes... */
+body {
+  margin: 0;
+  padding: 1.5em;
+  font: 1em/1.4 Sans-serif;
+
+  /* Now our background image is defined only in the body! */
+  background: url("") center center;
+  background-size: 1000vw auto;
+}
+
+main {
+  display: grid;
+  gap: 1.5rem;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: minmax(120px, auto);
+}
+
+div {
+  padding: 1.5em;
+  border-radius: 1px;
+  border: 1px solid rgba(255, 255, 255, .2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .1), 0 1px 8px rgba(0, 0, 0, .2);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
+
+<p><a href="https://pronoy2108.github.io/pronoy2108"><img src="https://raw.githubusercontent.com/pronoy2108/pronoy2108/gh-pages/iceland_improved.png" alt="Header" /></a></p>
+
+<p>Find me here:</p>
+
+<p><a href="https://discord.gg/yrj2kpnsU2">
+<img align="left" alt="My Discord" width="21px" src="https://raw.githubusercontent.com/anuraghazra/anuraghazra/master/assets/discord-round.svg"/>Discord
+</a></p>
+
+<p><a href="https://gitlab.com/pronoy2108">
+<img align="left" alt="GitLab" width="21px" src="https://raw.githubusercontent.com/pronoy2108/pronoy2108/2d284067205180139e7174dbf803d0f3418bc1c1/gitlab.svg"/>GitLab
+</a></p>
+
+<p>Programming languages that I know:</p>
+
+<ul>
+  <li><code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/markdown/markdown.png">Markdown</code></li>
+<li><code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png">HTML</code></li>
+<li><code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png">Python</code></li>
+<li><code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bash/bash.png">Bash</code></li>
+</ul>
+
+<h1 id="heythereimgsrchttpsrawgithubusercontentcommartinheinzmartinheinzmasterwavegifwidth30px">Hey there! <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px"></h1>
+
+<p>My name is Pronoy Mukherjee and I am self-taught student developer who is passionate about computer science.</p>
+
+<p>
+<!--**pronoy2108/pronoy2108** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.-->
+
+
+- 🔭 I’m currently working on windows 11 related projects
+
+- 🌱 I’m currently learning Markdown
+
+- 👯 I’m looking to collaborate on HTML projects
+
+- 🤔 I’m looking for help with Python, Javascript and C++...
+
+- 💬 Ask me about Markdown, HTML, Bash
+
+- 📫 How to reach me: Discord, GitLab....
+
+  </p>
+
+<hr />
+
+<h2 id="mygithubstatistics">My GitHub Statistics</h2>
+
+<p>
+<a href="https://github.com/pronoy2108/pronoy2108">
+<img  src="https://github-readme-stats.vercel.app/api?username=pronoy2108&show_icons=true&theme=tokyonight"/>
+</a>
+</p>
+
+<p>
+<img src="https://github-readme-streak-stats.herokuapp.com?user=pronoy2108&theme=tokyonight">
+</p>
+
+<p>
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pronoy2108&theme=tokyonight" alt="Top Langs">
+
+</p>
+
+<p>
+<a href=https://github.com/pronoy2108/Superfolders>
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=pronoy2108&repo=Superfolders&theme=tokyonight"/>
+</a>
+</p>
+
+<p>
+<a href=https://github.com/pronoy2108/tweaks-for-windows-11>
+<img  src="https://github-readme-stats.vercel.app/api/pin/?username=pronoy2108&repo=tweaks-for-windows-11&theme=tokyonight"/>
+</a>
+  </p>
+
+  <p>
+
+
+
+
+
+<img src="https://raw.githubusercontent.com/pronoy2108/pronoy2108/main/pronoy2108-2021.stl">
+
+  
+   
+    @pronoy2108's 2021 GitHub Skyline          
+
+
+    <div class="acrylic">
+    <p>
+     ✧    ✦           ✦              ▁               
+        ✦  ✧                       ☽✧█      ✧    ✧   
+                                    ▆█               
+                   ✧               ▃██               
+                ✦▄     ▄    ✧      ███      ✧        
+▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁█▁▁▁▁▁▁▅▁▁▁▅███▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+    </div>
+    </p>
+
+  </p>
+
+<p><img src="https://metrics.lecoq.io/pronoy2108?template=classic&amp;isocalendar=1&amp;languages=1&amp;introduction=1&amp;habits=1&amp;stars=1&amp;topics=1&amp;reactions=1&amp;people=1&amp;gists=1&amp;followup=1&amp;lines=1&amp;traffic=1&amp;stargazers=1&amp;projects=1&amp;activity=1&amp;achievements=1&amp;discussions=1&amp;support=1&amp;notable=1&amp;repositories=1&amp;skyline=1&amp;pagespeed=1&amp;music=1&amp;tweets=1&amp;anilist=1&amp;stackoverflow=1&amp;posts=1&amp;rss=1&amp;wakatime=1&amp;stock=1&amp;nightscout=1&amp;screenshot=1&amp;repositories=100&amp;repositories.batch=100&amp;repositories.forks=false&amp;repositories.affiliations=owner&amp;isocalendar.duration=half-year&amp;languages.limit=8&amp;languages.sections=most-used&amp;languages.colors=github&amp;languages.threshold=0%25&amp;languages.indepth=false&amp;languages.categories=markup%2C%20programming&amp;languages.recent.categories=markup%2C%20programming&amp;languages.recent.load=300&amp;languages.recent.days=14&amp;introduction.title=true&amp;habits.from=200&amp;habits.days=14&amp;habits.facts=true&amp;habits.charts=false&amp;habits.trim=false&amp;stars.limit=4&amp;topics.mode=starred&amp;topics.sort=stars&amp;topics.limit=15&amp;reactions.limit=200&amp;reactions.limit.issues=100&amp;reactions.days=0&amp;reactions.display=absolute&amp;reactions.ignored=github-actions%5Bbot%5D%2C%20dependabot%5Bbot%5D%2C%20dependabot-preview%5Bbot%5D&amp;people.limit=24&amp;people.size=28&amp;people.types=followers%2C%20following&amp;people.identicons=false&amp;people.shuffle=false&amp;followup.sections=repositories&amp;projects.limit=4&amp;projects.descriptions=false&amp;activity.limit=5&amp;activity.load=300&amp;activity.days=14&amp;activity.filter=all&amp;activity.visibility=all&amp;activity.timestamps=false&amp;achievements.threshold=C&amp;achievements.secrets=true&amp;achievements.display=detailed&amp;achievements.limit=0&amp;notable.repositories=false&amp;skyline.year=current-year&amp;skyline.frames=60&amp;skyline.quality=0.5&amp;skyline.compatibility=false&amp;pagespeed.url=.user.website&amp;pagespeed.detailed=false&amp;pagespeed.screenshot=false&amp;music.limit=4&amp;music.played.at=false&amp;music.user=.user.login&amp;tweets.attachments=false&amp;tweets.limit=2&amp;tweets.user=.user.twitter&amp;anilist.medias=anime%2C%20manga&amp;anilist.sections=favorites&amp;anilist.limit=2&amp;anilist.limit.characters=22&amp;anilist.shuffle=true&amp;anilist.user=.user.login&amp;stackoverflow.user=0&amp;stackoverflow.sections=answers-top%2C%20questions-recent&amp;stackoverflow.limit=2&amp;stackoverflow.lines=4&amp;stackoverflow.lines.snippet=2&amp;posts.descriptions=false&amp;posts.covers=false&amp;posts.limit=4&amp;posts.user=.user.login&amp;rss.limit=4&amp;wakatime.days=7&amp;wakatime.sections=time%2C%20projects%2C%20projects-graphs%2C%20languages%2C%20languages-graphs%2C%20editors%2C%20os&amp;wakatime.limit=5&amp;wakatime.url=https%3A%2F%2Fwakatime.com&amp;wakatime.user=current&amp;stock.duration=1d&amp;stock.interval=5m&amp;screenshot.title=Screenshot&amp;screenshot.selector=body&amp;screenshot.background=true&amp;nightscout.url=https%3A%2F%2Fexample.herokuapp.com&amp;nightscout.datapoints=12&amp;nightscout.lowalert=80&amp;nightscout.highalert=180&amp;nightscout.urgentlowalert=50&amp;nightscout.urgenthighalert=250&amp;config.timezone=UTC" alt="" /></p>
+
+<hr />
